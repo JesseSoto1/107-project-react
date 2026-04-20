@@ -1,13 +1,27 @@
 import QuantityPicker from "./QuantityPicker";
-function Product(){
+import { useState } from "react";
+function Product(props){
+const [quantity, setQuantity]= useState(1);    
+    function handleQtyChange(qty){
+        console.log("New Value", qty);
+        setQuantity(qty);
+    }
+function getTotal(){
+    let total = props.data.price * quantity;
+    return total.toFixed(2);
+}
+
+
+
     return(
         <div className="card" style={{width: "18rem"}}>
-                        <img src="https://images.unsplash.com/photo-1585059895524-72359e06133a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="card-img-top" alt="..."/>
+                        <img src={"/images/"+ props.data.image} className="card-img-top" alt="..."/>
                         <div className="card-body">
-                            <h5 className="text-start">Kiwi</h5>
-                            <h6 className="text-start">$ 3.99</h6>
+                            <h5 className="text-start">{props.data.title}</h5>
+                            <h6 className="text-start">${props.data.price.toFixed(2)}</h6>
+                            <h6 className = "total">{getTotal()}</h6>
 
-                            <QuantityPicker/>
+                            <QuantityPicker onChange={handleQtyChange}/>
 
                             <button href="#" className="btn btn-dark mt-4">Add to cart</button>
                         </div>

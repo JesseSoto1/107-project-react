@@ -1,16 +1,20 @@
 import { useState} from 'react';
-function QuantityPicker(){
+
+
+function QuantityPicker(props){
 
     const [quantity, setQuantity]= useState(1);
 
     function onAdd(){
         console.log("onAdd Function");
-        setQuantity(quantity+1)
+        setQuantity(quantity+1);
+        props.onChange(quantity+1);
     }
 
     function onDecrease(){
         console.log("onDecrease Function");
-        setQuantity(quantity-1)
+        setQuantity(quantity-1);
+        props.onChange(quantity-1);
     }
 
 
