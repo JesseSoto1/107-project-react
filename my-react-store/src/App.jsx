@@ -1,7 +1,15 @@
-import Catalog from './pages/Catalog';
+import { BrowserRouter, Routes, Route } from 'react-router'
 
-import NavBar from './components/NavBar';
+
+import About from './pages/About';
+import Catalog from './pages/Catalog';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import NotFound from "./pages/NotFound"
+
+
 import Footer from './components/Footer';
+import NavBar from './components/NavBar';
 
 import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,14 +17,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App(){
     return(
-        <div>
+        <BrowserRouter>
             <NavBar/>
             <main className='container'>
-                <Catalog/>
+                <Routes>
+                    <Route path = "/" element = {<Home/>}/>
+                    <Route path = "/about" element = {<About/>}/>
+                    <Route path = "/contact" element = {<Contact/>}/>
+                    <Route path = "/catalog" element = {<Catalog/>}/>
+                    <Route path = "*" element = {<NotFound/>}/>
+                </Routes>
             </main>
 
             <Footer/>
-        </div>
+        </BrowserRouter>
     );
 }
 

@@ -2,7 +2,7 @@
 // logic
 // export
 //follow this map for better programming//
-
+import { Link } from "react-router";
 import "./NavBar.css";
 
 
@@ -18,9 +18,10 @@ function NavBar(){
                 
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <a className="nav-link" aria-current="page" href="#">Home</a>
-                        <a className="nav-link" href="#">Catalog</a>
-                        <a className="nav-link" href="#">Pricing</a>
+                        <Link className="nav-link" aria-current="page" to={"/"}>Home</Link>
+                        <Link className="nav-link" to={"/about"}>About</Link>
+                        <Link className="nav-link" to={"/contact"}>Contact</Link>
+                        <Link className="nav-link" to={"/catalog"}>Catalog</Link>
                     </div>
                 </div>
             </div>

@@ -56,7 +56,7 @@ setProdsToDisplay(list);
 
             <div className= "row">
               
-                {categories.map(cat => <button className="btn btn-primary"onClick={()=>filter(cat)}>{cat}</button>)}            
+                {categories.map(cat => <button key={cat} className="btn btn-primary"onClick={()=>filter(cat)}>{cat}</button>)}            
                 <b />
                 {productsToDisplay.map(prod => <Product key={prod._id} data={prod}/>)}  
                 
