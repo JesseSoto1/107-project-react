@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import GlobalContext from "../state/globalContext";
 //first imports 
 // logic
 // export
@@ -8,12 +10,13 @@ import "./NavBar.css";
 
 
 function NavBar(){
+    const user = useContext(GlobalContext).user;
     return(
         <nav className="navbar navbar-expand-lg bg-dark bg-gradient" data-bs-theme="dark">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">Online Store</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                 <span className="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
                 </button>
                 
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -22,7 +25,11 @@ function NavBar(){
                         <Link className="nav-link" to={"/about"}>About</Link>
                         <Link className="nav-link" to={"/contact"}>Contact</Link>
                         <Link className="nav-link" to={"/catalog"}>Catalog</Link>
+                        <Link className="nav-link" to={"/admin"}>Admin</Link>
                     </div>
+                </div>
+                <div className="text-white">
+                    {user.name}
                 </div>
             </div>
         </nav>
