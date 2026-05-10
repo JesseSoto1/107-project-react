@@ -1,22 +1,22 @@
 const catalog = [
     {
-        "title":"Orange",
-        "category":"fruit",
+        "title":"Banana Blast",
+        "category":"Tropical seebs",
         "price":12.99,
         "image":"orange.png",
         "_id":"1"
-       
+    
     },
     {
-        "title":"Strawberry",
-        "category":"berry",
+        "title":"Strawberry Storm",
+        "category":"Fruity Seebs",
         "price":13.99,
         "image":"strawberry.png",
         "_id":"2"
     },
     {
-        "title":"Apple",
-        "category":"fruit",
+        "title":"Apple Avalanche",
+        "category":"Fruity",
         "price":13.99,
         "image":"apple.png",
         "_id":"3"

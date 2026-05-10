@@ -30,18 +30,18 @@ function hideEmail(){
             : <p className="text-info">Click the button to see my email address</p>
 
             }
-            <button className = "btn btn-danger text-dark rounded-4 me-2" onClick={hideEmail}>
+            <button className = "btn btn-outline-secondary text-dark rounded-4 me-2" onClick={hideEmail}>
             <IconMailOff className="mt-2"/>
             Hide my email
             </button>
-            <button className = "btn btn-primary text-dark rounded-4" onClick={showEmail}>
+            <button className = "btn btn-outline-secondary text-dark rounded-4" onClick={showEmail}>
             <IconMail className="mt-2"/>
             Show my email
             </button>
 
 
             <div className="my-4">
-                <img width={500} src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                <img className="rounded-1" width={500} src="https://plus.unsplash.com/premium_vector-1715632451165-87c3a13df4c1?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
             </div>
 
 

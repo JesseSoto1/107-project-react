@@ -25,7 +25,7 @@ function loadCatalog(){
     let service = new DataService();
     let data = service.getProducts();
     setProdsToDisplay(data);// initially, display all products
-    let cats = ["fruit","berry","all"];
+    let cats = ["Tropical Seebs","Fruity Seebs","ALL"];
     setCategories(cats);
 
 }
@@ -50,20 +50,23 @@ setProdsToDisplay(list);
 
     return(
         <div>
-            <h1>Check our amazing products</h1>
-
-
-
-            <div className= "row">
-              
-                {categories.map(cat => <button key={cat} className="btn btn-primary"onClick={()=>filter(cat)}>{cat}</button>)}            
-                <b />
+            <h1>Check out our amazing products for all the Birbs and Borbs you love</h1>
+            <div className="border p-3 m-4 bg-warning rounded shadow">
+                {categories.map(cat => <button key={cat} className="btn btn-outline-primary m-5"onClick={()=>filter(cat)}>{cat}</button>)}       
+                <br />
+                <div className= "d-flex flex-row justify-content-evenly m-5 border p-3 m-4 bg-danger-subtle rounded shadow ">
                 {productsToDisplay.map(prod => <Product key={prod._id} data={prod}/>)}  
                 
             
             
                     
             </div>
+
+
+            </div>   
+
+
+            
         </div>
     )
 }

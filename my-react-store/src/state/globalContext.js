@@ -6,7 +6,8 @@ const GlobalContext = createContext({
     cart:[],//needs to be array 
 
 // addProductToCart: function(){}
-    addProductToCart: () => {}
+    addProductToCart: () => {},
+    removeProductFromCart: () =>{}
 })
 
 // export the contexxt so it can be used in otehr components
