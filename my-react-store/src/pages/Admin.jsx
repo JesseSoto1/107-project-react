@@ -92,7 +92,7 @@ function Admin(){
 
                             <div className="text-start m-4">
                                 <label className="form-label">Discount</label>
-                                <input className=" form-control" type="text" value={couponDiscount} onChange={(event) => setCoupons(event.target.value)}/>
+                                <input className=" form-control" type="number" value={couponDiscount} onChange={(event) => setCouponDiscount(event.target.value)}/>
                             </div>
                             <div>
                                 <button className="btn btn-dark" onClick={saveCoupon}>Save Coupon</button>
